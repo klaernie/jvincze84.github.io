@@ -1345,6 +1345,12 @@ To https://github.com/jvincze84/jvincze84.github.io
 -v /home/mkdocs/Documents/mkdocs/jvincze84.github.io/:/usr/src/mkdocs/build \
 mkdocs:1 gh-deploy
 </code></pre>
+<p>If you previously saved your git credentials you may want to use it inside the container:</p>
+<pre><code class="language-bash">docker run -it --rm \
+-v /home/mkdocs/.git-credentials:/usr/src/mkdocs/.git-credentials \
+-v /home/mkdocs/Documents/mkdocs/jvincze84.github.io/:/usr/src/mkdocs/build \
+mkdocs:1 gh-deploy
+</code></pre>
                 
               
               
