@@ -394,6 +394,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fix-permission" class="md-nav__link">
+    Fix Permission
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1078,6 +1085,13 @@
           <li class="md-nav__item">
   <a href="#get-the-thoken" class="md-nav__link">
     Get The Thoken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-permission" class="md-nav__link">
+    Fix Permission
   </a>
   
 </li>
@@ -1771,6 +1785,7 @@ kubernetes-dashboard-token-24jfb   kubernetes.io/service-account-token   3      
 <p><strong>Get the token:</strong></p>
 <pre><code class="language-bash">kubectl -n kubernetes-dashboard get secret kubernetes-dashboard-token-24jfb -o json | jq -r  '.data.token' | base64 -d ; echo 
 </code></pre>
+<h3 id="fix-permission">Fix Permission<a class="headerlink" href="#fix-permission" title="Permanent link">&para;</a></h3>
 <p>You will see a lot of error message like this:</p>
 <pre><code class="language-log">namespaces is forbidden: User &quot;system:serviceaccount:kubernetes-dashboard:kubernetes-dashboard&quot; cannot list resource &quot;namespaces&quot; in API group &quot;&quot; at the cluster scope
 </code></pre>
