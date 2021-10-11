@@ -411,6 +411,68 @@
     CheatSheet
   </a>
   
+    <nav class="md-nav" aria-label="CheatSheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-and-delete-completed-pods" class="md-nav__link">
+    List And Delete Completed PODS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-container-logs" class="md-nav__link">
+    Check Container Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-into-the-container" class="md-nav__link">
+    Get Into The Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pending-pods-nginx-ingress" class="md-nav__link">
+    Pending PODS (nginx ingress)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-all-namespaces" class="md-nav__link">
+    Get All / All Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-join-command-add-worker-node" class="md-nav__link">
+    Print Join Command (Add Worker Node)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-resources-get-help" class="md-nav__link">
+    Get All Resources / Get Help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-dir-file-from-container" class="md-nav__link">
+    Copy Dir / File From Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1112,6 +1174,68 @@
   <a href="#cheatsheet" class="md-nav__link">
     CheatSheet
   </a>
+  
+    <nav class="md-nav" aria-label="CheatSheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-and-delete-completed-pods" class="md-nav__link">
+    List And Delete Completed PODS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-container-logs" class="md-nav__link">
+    Check Container Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-into-the-container" class="md-nav__link">
+    Get Into The Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pending-pods-nginx-ingress" class="md-nav__link">
+    Pending PODS (nginx ingress)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-all-namespaces" class="md-nav__link">
+    Get All / All Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-join-command-add-worker-node" class="md-nav__link">
+    Print Join Command (Add Worker Node)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-resources-get-help" class="md-nav__link">
+    Get All Resources / Get Help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-dir-file-from-container" class="md-nav__link">
+    Copy Dir / File From Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1858,19 +1982,15 @@ rules:
 </div>
 <h2 id="cheatsheet">CheatSheet<a class="headerlink" href="#cheatsheet" title="Permanent link">&para;</a></h2>
 <p>Finally I write here some command I'm using in daily basis.</p>
-<ul>
-<li>List And Delete <code>Completed</code> PODS.<br />
-  When a Job finishes it's work, the container is left as <code>Completed</code>. A lot of PODS in <code>Completed</code> statw can be disturbing, and they can be safely deleted.</li>
-</ul>
+<h4 id="list-and-delete-completed-pods">List And Delete <code>Completed</code> PODS<a class="headerlink" href="#list-and-delete-completed-pods" title="Permanent link">&para;</a></h4>
+<p>When a Job finishes it's work, the container is left as <code>Completed</code>. A lot of PODS in <code>Completed</code> statw can be disturbing, and they can be safely deleted.</p>
 <p>List: </p>
 <pre><code class="language-bash">kubectl get pods --all-namespaces --field-selector=status.phase=Succeeded
 </code></pre>
 <p>Delete:</p>
 <pre><code class="language-bash">kubectl delete pods --all-namespaces --field-selector=status.phase=Succeeded
 </code></pre>
-<ul>
-<li>Check Container Logs</li>
-</ul>
+<h4 id="check-container-logs">Check Container Logs<a class="headerlink" href="#check-container-logs" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash"># List PODS
 kubectl -n default get pods
 
@@ -1883,18 +2003,14 @@ kubectl -n default logs ghost-test-66846549b5-qgcl8 -f
 # Or follow without showing only the logs written from now.
 kubectl -n default logs ghost-test-66846549b5-qgcl8 -f --tail=0
 </code></pre>
-<ul>
-<li>Get Into The Container</li>
-</ul>
+<h4 id="get-into-the-container">Get Into The Container<a class="headerlink" href="#get-into-the-container" title="Permanent link">&para;</a></h4>
 <p>Sometimes you need to see what happens inside a container. In this case you can get a shell inside the container.</p>
 <pre><code class="language-bash">kubectl -n default exec -it ghost-test-66846549b5-qgcl8 -- /bin/bash
 
 # Or if no bash installed, you can try sh
 kubectl -n default exec -it ghost-test-66846549b5-qgcl8 -- /bin/sh
 </code></pre>
-<ul>
-<li>Pending PODS (nginx ingress)</li>
-</ul>
+<h4 id="pending-pods-nginx-ingress">Pending PODS (nginx ingress)<a class="headerlink" href="#pending-pods-nginx-ingress" title="Permanent link">&para;</a></h4>
 <p>Example:</p>
 <pre><code class="language-plain">NAME                                        READY   STATUS    RESTARTS   AGE
 ingress-nginx-controller-5f7bb7476d-2nhqc   0/1     Pending   0          4s
@@ -1930,27 +2046,19 @@ LAST SEEN   TYPE      REASON              OBJECT                                
 <p>Reference: </p>
 <ul>
 <li><a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/#use-strategic-merge-patch-to-update-a-deployment-using-the-retainkeys-strategy">Use strategic merge patch to update a Deployment using the retainKeys strategy</a></li>
-<li>
-<p><a href="https://blog.container-solutions.com/kubernetes-deployment-strategies">https://blog.container-solutions.com/kubernetes-deployment-strategies</a></p>
-</li>
-<li>
-<p>Get All / All Namespaces</p>
-</li>
+<li><a href="https://blog.container-solutions.com/kubernetes-deployment-strategies">https://blog.container-solutions.com/kubernetes-deployment-strategies</a></li>
 </ul>
+<h4 id="get-all-all-namespaces">Get All / All Namespaces<a class="headerlink" href="#get-all-all-namespaces" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash">kubectl -n ingress-nginx get all
 
 # Get all ingress in the cluster
 
 kubectl get ingress --all-namespaces -o wide
 </code></pre>
-<ul>
-<li>Print Join Command (Add Worker Node)</li>
-</ul>
+<h4 id="print-join-command-add-worker-node">Print Join Command (Add Worker Node)<a class="headerlink" href="#print-join-command-add-worker-node" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash">kubeadm token create --print-join-command
 </code></pre>
-<ul>
-<li>Get All Resources / Get Help</li>
-</ul>
+<h4 id="get-all-resources-get-help">Get All Resources / Get Help<a class="headerlink" href="#get-all-resources-get-help" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash">kubectl api-resources
 
 # Explain
@@ -1959,9 +2067,7 @@ kubectl explain pod
 kubectl explain pod.spec
 kubectl explain pod.spec.tolerations
 </code></pre>
-<ul>
-<li>Copy Dir / File From Container</li>
-</ul>
+<h4 id="copy-dir-file-from-container">Copy Dir / File From Container<a class="headerlink" href="#copy-dir-file-from-container" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash"># File 
 
 kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost/config.production.json  config.production.json
@@ -1969,11 +2075,9 @@ kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost/config.producti
 # Directory
 kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost .
 </code></pre>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><code>kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost .</code> &lt;-- This will copy the conents of the directory. If you want to create the 'ghost' directory on the destination use: </p>
+<details class="warning"><summary>Warning</summary><p><code>kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost .</code> &lt;-- This will copy the conents of the directory. If you want to create the 'ghost' directory on the destination use: </p>
 <p><code>kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost ghost</code></p>
-</div>
+</details>
                 
               
               
