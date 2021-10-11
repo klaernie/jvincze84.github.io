@@ -1780,12 +1780,7 @@ kubernetes-dashboard-token-24jfb   kubernetes.io/service-account-token   3      
 <pre><code class="language-bash">kubectl  edit  clusterrole kubernetes-dashboard
 </code></pre>
 <p>And modify:</p>
-<pre><code class="language-diff">root@kube-test:~# diff -u 01 02
-   labels:
-     k8s-app: kubernetes-dashboard
-   name: kubernetes-dashboard
-
- rules:
+<pre><code class="language-diff"> rules:
  - apiGroups:
 -  - metrics.k8s.io
 +  - '*'
