@@ -406,6 +406,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cheatsheet" class="md-nav__link">
+    CheatSheet
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1098,6 +1105,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet" class="md-nav__link">
+    CheatSheet
+  </a>
   
 </li>
       
@@ -1841,6 +1855,124 @@ rules:
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>Do NOT do this in Production system! This way you give cluster-admin role to kubernetes-dashboard ServiceAccount. Everybody who knows the token can do anything with your Kubernetes cluster!</p>
+</div>
+<h2 id="cheatsheet">CheatSheet<a class="headerlink" href="#cheatsheet" title="Permanent link">&para;</a></h2>
+<p>Finally I write here some command I'm using in daily basis.</p>
+<ul>
+<li>List And Delete <code>Completed</code> PODS.<br />
+  When a Job finishes it's work, the container is left as <code>Completed</code>. A lot of PODS in <code>Completed</code> statw can be disturbing, and they can be safely deleted.</li>
+</ul>
+<p>List: </p>
+<pre><code class="language-bash">kubectl get pods --all-namespaces --field-selector=status.phase=Succeeded
+</code></pre>
+<p>Delete:</p>
+<pre><code class="language-bash">kubectl delete pods --all-namespaces --field-selector=status.phase=Succeeded
+</code></pre>
+<ul>
+<li>Check Container Logs</li>
+</ul>
+<pre><code class="language-bash"># List PODS
+kubectl -n default get pods
+
+# Show the logs:
+kubectl -n default logs ghost-test-66846549b5-qgcl8
+
+# Or follow the logs:
+kubectl -n default logs ghost-test-66846549b5-qgcl8 -f
+
+# Or follow without showing only the logs written from now.
+kubectl -n default logs ghost-test-66846549b5-qgcl8 -f --tail=0
+</code></pre>
+<ul>
+<li>Get Into The Container</li>
+</ul>
+<p>Sometimes you need to see what happens inside a container. In this case you can get a shell inside the container.</p>
+<pre><code class="language-bash">kubectl -n default exec -it ghost-test-66846549b5-qgcl8 -- /bin/bash
+
+# Or if no bash installed, you can try sh
+kubectl -n default exec -it ghost-test-66846549b5-qgcl8 -- /bin/sh
+</code></pre>
+<ul>
+<li>Pending PODS (nginx ingress)</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-plain">NAME                                        READY   STATUS    RESTARTS   AGE
+ingress-nginx-controller-5f7bb7476d-2nhqc   0/1     Pending   0          4s
+ingress-nginx-controller-745c7c9f6c-m9q5q   1/1     Running   2          128m
+</code></pre>
+<p>Events:</p>
+<pre class="command-line" data-user="kube" data-host="kube-test" data-output="2-7"><code class="language-bash">kubectl -n ingress-nginx get events
+LAST SEEN   TYPE      REASON              OBJECT                                           MESSAGE
+34s         Warning   FailedScheduling    pod/ingress-nginx-controller-5f7bb7476d-2nhqc    0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.
+35s         Normal    SuccessfulCreate    replicaset/ingress-nginx-controller-5f7bb7476d   Created pod: ingress-nginx-controller-5f7bb7476d-2nhqc
+36s         Normal    ScalingReplicaSet   deployment/ingress-nginx-controller              Scaled up replica set ingress-nginx-controller-5f7bb7476d to 1</code></pre>
+
+<p>The problem: <code>0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.</code></p>
+<p>NGinx Ingress Controller (the POD) uses hostPort, and RollingUpdate strategy. This means that Kubernetes tries to start a new instance, and after the new instance is Running and healthy stop the "old" one. But in this case it is not possible because two container can not bind the same ports (80,443). </p>
+<p>The easiest way to solve this is to delete the old pod manually. ( <code>ingress-nginx-controller-745c7c9f6c-m9q5q</code> )</p>
+<pre><code class="language-bash">kubectl -n ingress-nginx delete pod ingress-nginx-controller-745c7c9f6c-m9q5q
+</code></pre>
+<p>Permanent solution could be changing the strategy to ReCreate.</p>
+<pre><code class="language-bash">kubectl patch deployment/ingress-nginx-controller -n ingress-nginx  -p '{ &quot;spec&quot;: { &quot;strategy&quot;:{ &quot;$retainKeys&quot;: [&quot;type&quot;],&quot;type&quot;: &quot;Recreate&quot;}}}'
+</code></pre>
+<p>Show pretty print Json</p>
+<pre><code class="language-json">{
+  &quot;spec&quot;: {
+    &quot;strategy&quot;: {
+      &quot;$retainKeys&quot;: [
+        &quot;type&quot;
+      ],
+      &quot;type&quot;: &quot;Recreate&quot;
+    }
+  }
+}
+</code></pre>
+<p>Reference: </p>
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/#use-strategic-merge-patch-to-update-a-deployment-using-the-retainkeys-strategy">Use strategic merge patch to update a Deployment using the retainKeys strategy</a></li>
+<li>
+<p><a href="https://blog.container-solutions.com/kubernetes-deployment-strategies">https://blog.container-solutions.com/kubernetes-deployment-strategies</a></p>
+</li>
+<li>
+<p>Get All / All Namespaces</p>
+</li>
+</ul>
+<pre><code class="language-bash">kubectl -n ingress-nginx get all
+
+# Get all ingress in the cluster
+
+kubectl get ingress --all-namespaces -o wide
+</code></pre>
+<ul>
+<li>Print Join Command (Add Worker Node)</li>
+</ul>
+<pre><code class="language-bash">kubeadm token create --print-join-command
+</code></pre>
+<ul>
+<li>Get All Resources / Get Help</li>
+</ul>
+<pre><code class="language-bash">kubectl api-resources
+
+# Explain
+
+kubectl explain pod
+kubectl explain pod.spec
+kubectl explain pod.spec.tolerations
+</code></pre>
+<ul>
+<li>Copy Dir / File From Container</li>
+</ul>
+<pre><code class="language-bash"># File 
+
+kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost/config.production.json  config.production.json
+
+# Directory
+kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost .
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost .</code> &lt;-- This will copy the conents of the directory. If you want to create the 'ghost' directory on the destination use: </p>
+<p><code>kubectl -n default cp ghost-test-66846549b5-qgcl8:/var/lib/ghost ghost</code></p>
 </div>
                 
               
