@@ -9,19 +9,21 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="canonical" href="https://readthedocs.vinczejanos.info/Old_Blog_Contents/nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_%28part_2%29/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Vincze Janos Blog</title>
+        <title>Reliable Mqtt Connection With Nodemcu (part 2) - Vincze Janos Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,9 +38,9 @@
     
     
     
-      <link rel="stylesheet" href="/css/width.css">
+      <link rel="stylesheet" href="../../../css/width.css">
     
-      <link rel="stylesheet" href="/css/prism.css">
+      <link rel="stylesheet" href="../../../css/prism.css">
     
     
       
@@ -70,7 +72,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -78,6 +80,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#reliable-mqtt-connection-with-nodemcu-part-2" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -88,7 +95,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Vincze Janos Blog" class="md-header__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
+    <a href="../../.." title="Vincze Janos Blog" class="md-header__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -107,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Reliable Mqtt Connection With Nodemcu (part 2)
             
           </span>
         </div>
@@ -212,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Vincze Janos Blog" class="md-nav__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
+    <a href="../../.." title="Vincze Janos Blog" class="md-nav__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -244,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Welcome To My Blog
       </a>
     </li>
@@ -259,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Tips_And_Tricks/" class="md-nav__link">
+      <a href="../../../Tips_And_Tricks/" class="md-nav__link">
         Tips And Tricks
       </a>
     </li>
@@ -272,12 +279,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -326,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Compile_Apache_Httpd_2.4.x_Php/" class="md-nav__link">
+      <a href="../../linux/Compile_Apache_Httpd_2.4.x_Php/" class="md-nav__link">
         Compile Apache HTTPD 2.4.X & PHP
       </a>
     </li>
@@ -340,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Create_Self_Signed_Certificate_For_Apache_Webserver/" class="md-nav__link">
+      <a href="../../linux/Create_Self_Signed_Certificate_For_Apache_Webserver/" class="md-nav__link">
         Create Self Signed Certificate For Apache Webserver
       </a>
     </li>
@@ -354,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Install_%28compile%29_%26_Configure_Motion_Av_Tools/" class="md-nav__link">
+      <a href="../../linux/Install_%28compile%29_%26_Configure_Motion_Av_Tools/" class="md-nav__link">
         Install (compile) & Configure Motion Av Tools
       </a>
     </li>
@@ -368,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Install_Mps-youtube_Console_Based_Youtube_Player/" class="md-nav__link">
+      <a href="../../linux/Install_Mps-youtube_Console_Based_Youtube_Player/" class="md-nav__link">
         Install Mps youtube Console Based Youtube Player
       </a>
     </li>
@@ -382,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/create_Your_Own_Dyndns_Service_With_Bind_named/" class="md-nav__link">
+      <a href="../../linux/create_Your_Own_Dyndns_Service_With_Bind_named/" class="md-nav__link">
         create Your Own Dyndns Service With Bind named
       </a>
     </li>
@@ -401,12 +410,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -429,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/How_To_Compile_Nodemcu_Firmware/" class="md-nav__link">
+      <a href="../How_To_Compile_Nodemcu_Firmware/" class="md-nav__link">
         How To Compile Nodemcu Firmware
       </a>
     </li>
@@ -443,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/How_To_Unbrick_Esp8266_blinking_Blue_Led/" class="md-nav__link">
+      <a href="../How_To_Unbrick_Esp8266_blinking_Blue_Led/" class="md-nav__link">
         How To Unbrick Esp8266 blinking Blue Led
       </a>
     </li>
@@ -457,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Install_Openalpr_On_Raspberry_Pi_3/" class="md-nav__link">
+      <a href="../Install_Openalpr_On_Raspberry_Pi_3/" class="md-nav__link">
         Install OpenALPR on Raspberry PI 3
       </a>
     </li>
@@ -471,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Logging_Mqtt_Data_%28subscription%29_To_Mysql_With_Shell_Script/" class="md-nav__link">
+      <a href="../Logging_Mqtt_Data_%28subscription%29_To_Mysql_With_Shell_Script/" class="md-nav__link">
         Logging Mqtt Data (subscription) To Mysql With Shell Script
       </a>
     </li>
@@ -485,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Reliable_MQTT_conenction_with_NodeMCU/" class="md-nav__link">
+      <a href="../Reliable_MQTT_conenction_with_NodeMCU/" class="md-nav__link">
         Reliable MQTT conenction with NodeMCU
       </a>
     </li>
@@ -497,11 +508,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_%28part_2%29/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Reliable Mqtt Connection With Nodemcu (part 2)
       </a>
+      
     </li>
   
 
@@ -513,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Very_Simple_Way_To_Send_Email_Using_Nodemcu_Firmware/" class="md-nav__link">
+      <a href="../Very_Simple_Way_To_Send_Email_Using_Nodemcu_Firmware/" class="md-nav__link">
         Very Simple Way to Send Email Using NodeMCU firmware
       </a>
     </li>
@@ -560,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Collect_Network_Statistic_With_Telegraf_Vnstat/" class="md-nav__link">
+      <a href="../../other/Collect_Network_Statistic_With_Telegraf_Vnstat/" class="md-nav__link">
         Collect Network Statistic With Telegraf & VNSTAT
       </a>
     </li>
@@ -574,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Iptables_Examples/" class="md-nav__link">
+      <a href="../../other/Iptables_Examples/" class="md-nav__link">
         Iptables Examples
       </a>
     </li>
@@ -588,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Nokia_6120c_%28bb5%29_Forgotten_Security_Code/" class="md-nav__link">
+      <a href="../../other/Nokia_6120c_%28bb5%29_Forgotten_Security_Code/" class="md-nav__link">
         Nokia 6120c (BB5) Forgotten Security Code
       </a>
     </li>
@@ -602,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Sonoff_Relays_With_Openhab_And_Tasmota_Firmware/" class="md-nav__link">
+      <a href="../../other/Sonoff_Relays_With_Openhab_And_Tasmota_Firmware/" class="md-nav__link">
         Sonoff Relays With OpenHab And Tasmota Firmware
       </a>
     </li>
@@ -649,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Compile_Go_Language_On_Raspberry_Pi/" class="md-nav__link">
+      <a href="../../raspberry/Compile_Go_Language_On_Raspberry_Pi/" class="md-nav__link">
         Compile Go Language On Raspberry Pi
       </a>
     </li>
@@ -663,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Google_Cloud_Print_With_Orange_Pi_or_Rpi/" class="md-nav__link">
+      <a href="../../raspberry/Google_Cloud_Print_With_Orange_Pi_or_Rpi/" class="md-nav__link">
         Google Cloud Print With Orange Pi or Rpi
       </a>
     </li>
@@ -677,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/How_To_Install_Nodered_On_Raspberry_Pi/" class="md-nav__link">
+      <a href="../../raspberry/How_To_Install_Nodered_On_Raspberry_Pi/" class="md-nav__link">
         How To Install Nodered On Raspberry Pi
       </a>
     </li>
@@ -691,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Install_Debian_Jessie_To_Orange_Pi_Plus_2/" class="md-nav__link">
+      <a href="../../raspberry/Install_Debian_Jessie_To_Orange_Pi_Plus_2/" class="md-nav__link">
         Install Debian Jessie to Orange PI Plus 2
       </a>
     </li>
@@ -705,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Install_Openalpr_On_Raspberry_Pi_3_part_2/" class="md-nav__link">
+      <a href="../../raspberry/Install_Openalpr_On_Raspberry_Pi_3_part_2/" class="md-nav__link">
         Install Openalpr On Raspberry Pi 3 part 2
       </a>
     </li>
@@ -719,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Mount_Sd_Card_Image_partitioned_Image_Wo_Kpartx/" class="md-nav__link">
+      <a href="../../raspberry/Mount_Sd_Card_Image_partitioned_Image_Wo_Kpartx/" class="md-nav__link">
         Mount SD card image (partitioned image) w/o kpartx
       </a>
     </li>
@@ -733,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Move_Root_File_System_To_Usb_Storage_%28rpi2_%26_Rpi3%29/" class="md-nav__link">
+      <a href="../../raspberry/Move_Root_File_System_To_Usb_Storage_%28rpi2_%26_Rpi3%29/" class="md-nav__link">
         Move root file system to USB storage (RPI2 & RPI3)
       </a>
     </li>
@@ -747,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/" class="md-nav__link">
+      <a href="../../raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/" class="md-nav__link">
         Raspberry Pi 2 As Print Server Airprint
       </a>
     </li>
@@ -761,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Raspberry_Pi_3_As_Wifi_Range_Extender/" class="md-nav__link">
+      <a href="../../raspberry/Raspberry_Pi_3_As_Wifi_Range_Extender/" class="md-nav__link">
         Raspberry Pi 3 As Wifi Range Extender
       </a>
     </li>
@@ -816,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/27/Install_Matrix_Home_Server/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/27/Install_Matrix_Home_Server/" class="md-nav__link">
         Install Matrix Home Server On Kubernetes
       </a>
     </li>
@@ -830,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/20/Install_And_Configure_Wireguard_VPN/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/20/Install_And_Configure_Wireguard_VPN/" class="md-nav__link">
         Install And Configure Wireguard VPN
       </a>
     </li>
@@ -844,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/10/Get_Started_With_Portainer/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/10/Get_Started_With_Portainer/" class="md-nav__link">
         Get Started With Portainer
       </a>
     </li>
@@ -858,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/01/How_to_use_MKdocs/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/01/How_to_use_MKdocs/" class="md-nav__link">
         How To Use MKDocs with Docker?
       </a>
     </li>
@@ -872,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/09/25/Install_Single_Node_Kubernetes_Cluster/" class="md-nav__link">
+      <a href="../../../Blog/2021/09/25/Install_Single_Node_Kubernetes_Cluster/" class="md-nav__link">
         Install A Single Node Kubernetes "Cluster"
       </a>
     </li>
@@ -893,11 +914,191 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/jvincze84/jvincze84.github.io/edit/master/docs/Old_Blog_Contents/nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_(part_2).md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>This page has been updated a long time ago.</strong>  Information found here could be outdated and may lead to missconfiguration.<br />
+Some of the links and references may be broken or lead to non existing pages.<br />
+Please use this docs carefully. Most of the information here now is only for reference or example!</p>
+</div>
+<h1 id="reliable-mqtt-connection-with-nodemcu-part-2">Reliable MQTT connection with NodeMCU (part 2)<a class="headerlink" href="#reliable-mqtt-connection-with-nodemcu-part-2" title="Permanent link">&para;</a></h1>
+<p>Thanks to "Modestas" post on <a href="http://blog.vinczejanos.info/2016/09/29/reliable-mqtt-conenction-with-nodemcu/">my previous article </a> now I will show you another solution to this topic, which is much easier to understand and simpler.</p>
+<ul>
+<li><strong>First we will create a config file like this:</strong></li>
+</ul>
+<pre><code class="language-lua">--[[
+File Name: config.lua
+]]
+local module = {}
+    module.NodeID=node.chipid()
+
+    -- mqtt Related Config    
+    module.mqttHost=&quot;172.16.0.***&quot;
+    module.mqttPort=&quot;1883&quot;
+    module.mqttUserName=&quot;**************&quot;
+    module.mqttpassword=&quot;**************&quot;
+    module.mqttLwtTopic=&quot;NodeMCU/lwt/&quot;..module.NodeID
+
+    module.mqttSubscibeTopics={[&quot;NodeMCU/&quot;..module.NodeID..&quot;/command&quot;]=0,[&quot;NodeMCU/&quot;..module.NodeID..&quot;/relayCh/+&quot;]=0}
+    module.mqttPublishTopicStatus=&quot;NodeMCU/&quot;..module.NodeID..&quot;/status/&quot;
+    module.mqttUpdateStatusInterval=60000
+    module.mqttUpdateStatusTimerId=2
+return module
+</code></pre>
+<p>You can use <code>table</code> object to store these parameter/value pairs instead of this module. Maybe later I will write a post about 'how to do that'.</p>
+<ul>
+<li><strong>Create MQTT client and set LWT</strong></li>
+</ul>
+<pre><code class="language-lua">m=mqtt.Client(config.NodeID, 10, config.mqttUserName, config.mqttpassword)
+m:lwt(config.mqttLwtTopic, &quot;Inactive&quot;, 0,1)
+</code></pre>
+<p>And do not forget to set <strong><code>isMqttAlive</code></strong> value to <code>false</code>. We will use this variable to determine if mqtt connection is alive or not. The initial value must be false, because at the first run the ESP isn't connected to the broker.</p>
+<ul>
+<li><strong>connectToMqtt() Function</strong></li>
+</ul>
+<pre><code class="language-lua">function connectToMqtt()
+    m:connect(config.mqttHost, config.mqttPort, 0, 0, function(client) 
+        isMqttAlive = true 
+        print(&quot;Successfully Conencted to MQTT broker: &quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort)
+
+-- Here you can do some useful things. Example subscribe to a topic, or set up what should happen if a message is received. (`mqtt.client:on()`)
+
+    end,
+    function(con,reason)
+        print(&quot;Faild to connect to MQTT broker: &quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort..&quot;, Reason: &quot;..reason)
+    isMqttAlive = false
+    end)
+end
+</code></pre>
+<p>This function will be used to connect to the MQTT broker, and the <code>isMqttAlive</code> variable is also will be set here:
+-If the ESP is successfully connected to the broker, <code>isMqttAlive</code> will be true.<br />
+-If something goes wrong, this variable will be false.  </p>
+<ul>
+<li><strong>Set up mqtt.client:on("offline"....)</strong></li>
+</ul>
+<pre><code class="language-lua">m:on(&quot;offline&quot;, function(con) 
+    isMqttAlive = false 
+    print(&quot;Disconnected from MQTT&quot;)
+end)
+</code></pre>
+<p>If the ESP disconnects from the broker this will set <code>isMqttAlive</code> to false.</p>
+<ul>
+<li><strong>Final steps</strong></li>
+</ul>
+<p>After you call <code>connectToMqtt()</code> function you have to check the value of <code>isMqttAlive</code> before each message publication.</p>
+<p>In my case I use a DHT22 sensor to monitor temperature and humidity, and I send update every 10 minutes. To do this a timer should be used. Example:</p>
+<pre><code class="language-lua">tmr.alarm(config.mqttUpdateStatusTimerId,config.mqttUpdateStatusInterval, tmr.ALARM_AUTO, function()
+if isMqttAlive == false
+    then
+        print(&quot;Reconnect To MQTT:&quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort)
+        connectToMqtt()
+    else
+        print(&quot;MQTT is OK: &quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort)
+        mqttUpdateGeneralStatus(m)
+    end
+end)
+</code></pre>
+<p>As you can see, first,  I check if <code>isMqttAlive</code> is ture or false.
+- If it is false I call <code>connectToMqtt()</code> function to (re)connect to the broker.<br />
+- If it is true the <code>mqttUpdateGeneralStatus(m)</code> function will be called, which queries the sensor and send the actual temperature and humidity values to the broker.</p>
+<ul>
+<li><strong>A Complete Example</strong></li>
+</ul>
+<pre><code class="language-lua">local config=require(&quot;config&quot;)
+local setup=require(&quot;setup&quot;)
+local mqttSP=require(&quot;mqttSP&quot;)
+m=mqtt.Client(config.NodeID, 10, config.mqttUserName, config.mqttpassword)
+m:lwt(config.mqttLwtTopic, &quot;Inactive&quot;, 0,1)
+
+
+isMqttAlive=false
+
+-- Conenct Function
+function connectToMqtt()
+    m:connect(config.mqttHost, config.mqttPort, 0, 0, function(client) 
+        isMqttAlive = true 
+        print(&quot;Successfully Conencted to MQTT broker: &quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort)
+        mqttSP.mqttSubsribe(m,config.mqttSubscibeTopics)
+        mqttSP.mqttOnMessage(m)
+        m:publish(config.mqttLwtTopic,&quot;Active&quot;,0,1)
+        m:on(&quot;offline&quot;, function(con) 
+           isMqttAlive = false 
+           print(&quot;Disconnected from MQTT&quot;)
+        end)
+    end,
+    function(con,reason)
+        print(&quot;Faild to connect to MQTT broker: &quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort..&quot;, Reason: &quot;..reason)
+    end)
+end
+
+-- Connect To Broker
+connectToMqtt()
+
+-- Start Timer
+tmr.alarm(config.mqttUpdateStatusTimerId,config.mqttUpdateStatusInterval, tmr.ALARM_AUTO, function()
+if isMqttAlive == false
+    then
+        print(&quot;Reconnect To MQTT:&quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort)
+        connectToMqtt()
+    else
+        print(&quot;MQTT is OK: &quot;..config.mqttHost..&quot; on port: &quot;..config.mqttPort)
+        mqttSP.mqttUpdateGeneralStatus(m,setup.getPublicIp())
+    end
+end)
+</code></pre>
+<p><mark><strong>REFERENCES:</strong></mark></p>
+<ul>
+<li>https://nodemcu.readthedocs.io/en/master/en/modules/mqtt/</li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2021</span>
+      
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var script,disqus_config=function(){this.page.url="https://readthedocs.vinczejanos.info/Old_Blog_Contents/nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_%28part_2%29/",this.page.identifier="Old_Blog_Contents/nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_%28part_2%29/"};"undefined"==typeof DISQUS?((script=document.createElement("script")).async=!0,script.src="https://shortname-jvincze-test.disqus.com/embed.js",script.setAttribute("data-timestamp",Date.now()),document.body.appendChild(script)):DISQUS.reset({reload:!0,config:disqus_config})</script>
 
               
             </article>
@@ -928,12 +1129,12 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "search.suggest", "search.highlight", "search.highlight", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.highlight", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
-        <script src="/js/prism.js"></script>
+        <script src="../../../js/prism.js"></script>
       
     
   </body>

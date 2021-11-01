@@ -9,19 +9,21 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="canonical" href="https://readthedocs.vinczejanos.info/Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Vincze Janos Blog</title>
+        <title>Raspberry Pi 2 As Print Server Airprint - Vincze Janos Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,9 +38,9 @@
     
     
     
-      <link rel="stylesheet" href="/css/width.css">
+      <link rel="stylesheet" href="../../../css/width.css">
     
-      <link rel="stylesheet" href="/css/prism.css">
+      <link rel="stylesheet" href="../../../css/prism.css">
     
     
       
@@ -70,7 +72,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -78,6 +80,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#1-samsung-driver" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -88,7 +95,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Vincze Janos Blog" class="md-header__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
+    <a href="../../.." title="Vincze Janos Blog" class="md-header__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -107,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Raspberry Pi 2 As Print Server Airprint
             
           </span>
         </div>
@@ -212,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Vincze Janos Blog" class="md-nav__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
+    <a href="../../.." title="Vincze Janos Blog" class="md-nav__button md-logo" aria-label="Vincze Janos Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -244,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Welcome To My Blog
       </a>
     </li>
@@ -259,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Tips_And_Tricks/" class="md-nav__link">
+      <a href="../../../Tips_And_Tricks/" class="md-nav__link">
         Tips And Tricks
       </a>
     </li>
@@ -272,12 +279,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -326,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Compile_Apache_Httpd_2.4.x_Php/" class="md-nav__link">
+      <a href="../../linux/Compile_Apache_Httpd_2.4.x_Php/" class="md-nav__link">
         Compile Apache HTTPD 2.4.X & PHP
       </a>
     </li>
@@ -340,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Create_Self_Signed_Certificate_For_Apache_Webserver/" class="md-nav__link">
+      <a href="../../linux/Create_Self_Signed_Certificate_For_Apache_Webserver/" class="md-nav__link">
         Create Self Signed Certificate For Apache Webserver
       </a>
     </li>
@@ -354,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Install_%28compile%29_%26_Configure_Motion_Av_Tools/" class="md-nav__link">
+      <a href="../../linux/Install_%28compile%29_%26_Configure_Motion_Av_Tools/" class="md-nav__link">
         Install (compile) & Configure Motion Av Tools
       </a>
     </li>
@@ -368,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/Install_Mps-youtube_Console_Based_Youtube_Player/" class="md-nav__link">
+      <a href="../../linux/Install_Mps-youtube_Console_Based_Youtube_Player/" class="md-nav__link">
         Install Mps youtube Console Based Youtube Player
       </a>
     </li>
@@ -382,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/linux/create_Your_Own_Dyndns_Service_With_Bind_named/" class="md-nav__link">
+      <a href="../../linux/create_Your_Own_Dyndns_Service_With_Bind_named/" class="md-nav__link">
         create Your Own Dyndns Service With Bind named
       </a>
     </li>
@@ -429,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/How_To_Compile_Nodemcu_Firmware/" class="md-nav__link">
+      <a href="../../nodemcu/How_To_Compile_Nodemcu_Firmware/" class="md-nav__link">
         How To Compile Nodemcu Firmware
       </a>
     </li>
@@ -443,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/How_To_Unbrick_Esp8266_blinking_Blue_Led/" class="md-nav__link">
+      <a href="../../nodemcu/How_To_Unbrick_Esp8266_blinking_Blue_Led/" class="md-nav__link">
         How To Unbrick Esp8266 blinking Blue Led
       </a>
     </li>
@@ -457,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Install_Openalpr_On_Raspberry_Pi_3/" class="md-nav__link">
+      <a href="../../nodemcu/Install_Openalpr_On_Raspberry_Pi_3/" class="md-nav__link">
         Install OpenALPR on Raspberry PI 3
       </a>
     </li>
@@ -471,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Logging_Mqtt_Data_%28subscription%29_To_Mysql_With_Shell_Script/" class="md-nav__link">
+      <a href="../../nodemcu/Logging_Mqtt_Data_%28subscription%29_To_Mysql_With_Shell_Script/" class="md-nav__link">
         Logging Mqtt Data (subscription) To Mysql With Shell Script
       </a>
     </li>
@@ -485,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Reliable_MQTT_conenction_with_NodeMCU/" class="md-nav__link">
+      <a href="../../nodemcu/Reliable_MQTT_conenction_with_NodeMCU/" class="md-nav__link">
         Reliable MQTT conenction with NodeMCU
       </a>
     </li>
@@ -499,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_%28part_2%29/" class="md-nav__link">
+      <a href="../../nodemcu/Reliable_Mqtt_Connection_With_Nodemcu_%28part_2%29/" class="md-nav__link">
         Reliable Mqtt Connection With Nodemcu (part 2)
       </a>
     </li>
@@ -513,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/nodemcu/Very_Simple_Way_To_Send_Email_Using_Nodemcu_Firmware/" class="md-nav__link">
+      <a href="../../nodemcu/Very_Simple_Way_To_Send_Email_Using_Nodemcu_Firmware/" class="md-nav__link">
         Very Simple Way to Send Email Using NodeMCU firmware
       </a>
     </li>
@@ -560,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Collect_Network_Statistic_With_Telegraf_Vnstat/" class="md-nav__link">
+      <a href="../../other/Collect_Network_Statistic_With_Telegraf_Vnstat/" class="md-nav__link">
         Collect Network Statistic With Telegraf & VNSTAT
       </a>
     </li>
@@ -574,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Iptables_Examples/" class="md-nav__link">
+      <a href="../../other/Iptables_Examples/" class="md-nav__link">
         Iptables Examples
       </a>
     </li>
@@ -588,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Nokia_6120c_%28bb5%29_Forgotten_Security_Code/" class="md-nav__link">
+      <a href="../../other/Nokia_6120c_%28bb5%29_Forgotten_Security_Code/" class="md-nav__link">
         Nokia 6120c (BB5) Forgotten Security Code
       </a>
     </li>
@@ -602,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/other/Sonoff_Relays_With_Openhab_And_Tasmota_Firmware/" class="md-nav__link">
+      <a href="../../other/Sonoff_Relays_With_Openhab_And_Tasmota_Firmware/" class="md-nav__link">
         Sonoff Relays With OpenHab And Tasmota Firmware
       </a>
     </li>
@@ -621,12 +630,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
       
       
       
@@ -649,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Compile_Go_Language_On_Raspberry_Pi/" class="md-nav__link">
+      <a href="../Compile_Go_Language_On_Raspberry_Pi/" class="md-nav__link">
         Compile Go Language On Raspberry Pi
       </a>
     </li>
@@ -663,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Google_Cloud_Print_With_Orange_Pi_or_Rpi/" class="md-nav__link">
+      <a href="../Google_Cloud_Print_With_Orange_Pi_or_Rpi/" class="md-nav__link">
         Google Cloud Print With Orange Pi or Rpi
       </a>
     </li>
@@ -677,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/How_To_Install_Nodered_On_Raspberry_Pi/" class="md-nav__link">
+      <a href="../How_To_Install_Nodered_On_Raspberry_Pi/" class="md-nav__link">
         How To Install Nodered On Raspberry Pi
       </a>
     </li>
@@ -691,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Install_Debian_Jessie_To_Orange_Pi_Plus_2/" class="md-nav__link">
+      <a href="../Install_Debian_Jessie_To_Orange_Pi_Plus_2/" class="md-nav__link">
         Install Debian Jessie to Orange PI Plus 2
       </a>
     </li>
@@ -705,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Install_Openalpr_On_Raspberry_Pi_3_part_2/" class="md-nav__link">
+      <a href="../Install_Openalpr_On_Raspberry_Pi_3_part_2/" class="md-nav__link">
         Install Openalpr On Raspberry Pi 3 part 2
       </a>
     </li>
@@ -719,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Mount_Sd_Card_Image_partitioned_Image_Wo_Kpartx/" class="md-nav__link">
+      <a href="../Mount_Sd_Card_Image_partitioned_Image_Wo_Kpartx/" class="md-nav__link">
         Mount SD card image (partitioned image) w/o kpartx
       </a>
     </li>
@@ -733,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Move_Root_File_System_To_Usb_Storage_%28rpi2_%26_Rpi3%29/" class="md-nav__link">
+      <a href="../Move_Root_File_System_To_Usb_Storage_%28rpi2_%26_Rpi3%29/" class="md-nav__link">
         Move root file system to USB storage (RPI2 & RPI3)
       </a>
     </li>
@@ -745,11 +756,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Raspberry Pi 2 As Print Server Airprint
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Raspberry Pi 2 As Print Server Airprint
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-samsung-driver" class="md-nav__link">
+    1. Samsung Driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installing-and-configuring-cups" class="md-nav__link">
+    2. Installing and configuring CUPS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-make-you-printer-available-for-air-print" class="md-nav__link">
+    2. Make you printer available for Air print
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-add-your-printer-to-windows-10" class="md-nav__link">
+    3. Add your printer to Windows 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-windows-setup" class="md-nav__link">
+    4. Windows Setup:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -761,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Old_Blog_Contents/raspberry/Raspberry_Pi_3_As_Wifi_Range_Extender/" class="md-nav__link">
+      <a href="../Raspberry_Pi_3_As_Wifi_Range_Extender/" class="md-nav__link">
         Raspberry Pi 3 As Wifi Range Extender
       </a>
     </li>
@@ -816,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/27/Install_Matrix_Home_Server/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/27/Install_Matrix_Home_Server/" class="md-nav__link">
         Install Matrix Home Server On Kubernetes
       </a>
     </li>
@@ -830,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/20/Install_And_Configure_Wireguard_VPN/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/20/Install_And_Configure_Wireguard_VPN/" class="md-nav__link">
         Install And Configure Wireguard VPN
       </a>
     </li>
@@ -844,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/10/Get_Started_With_Portainer/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/10/Get_Started_With_Portainer/" class="md-nav__link">
         Get Started With Portainer
       </a>
     </li>
@@ -858,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/10/01/How_to_use_MKdocs/" class="md-nav__link">
+      <a href="../../../Blog/2021/10/01/How_to_use_MKdocs/" class="md-nav__link">
         How To Use MKDocs with Docker?
       </a>
     </li>
@@ -872,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Blog/2021/09/25/Install_Single_Node_Kubernetes_Cluster/" class="md-nav__link">
+      <a href="../../../Blog/2021/09/25/Install_Single_Node_Kubernetes_Cluster/" class="md-nav__link">
         Install A Single Node Kubernetes "Cluster"
       </a>
     </li>
@@ -893,11 +968,208 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-samsung-driver" class="md-nav__link">
+    1. Samsung Driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installing-and-configuring-cups" class="md-nav__link">
+    2. Installing and configuring CUPS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-make-you-printer-available-for-air-print" class="md-nav__link">
+    2. Make you printer available for Air print
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-add-your-printer-to-windows-10" class="md-nav__link">
+    3. Add your printer to Windows 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-windows-setup" class="md-nav__link">
+    4. Windows Setup:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/jvincze84/jvincze84.github.io/edit/master/docs/Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Raspberry Pi 2 As Print Server Airprint</h1>
+                
+                <div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>This page has been updated a long time ago.</strong>  Information found here could be outdated and may lead to missconfiguration.<br />
+Some of the links and references may be broken or lead to non existing pages.<br />
+Please use this docs carefully. Most of the information here now is only for reference or example!</p>
+</div>
+<p>I have an old but working Samsung ML1510 printer, and everytime I want to print something I have to turn on my old desktop PC, copy my doc(s) to it and  start printing from it. So I have decided to make my old printer able to work over wireless. </p>
+<p>My goals:  </p>
+<ul>
+<li>To print from my Home network over Wifi connection. I have an iPhone and it supports AirPrint.  </li>
+<li>I have a Google account, and Google has "Google Cloud Print" service. It supports local printing and printing over the internet from anywhere. (I don't understand why people want to print from anywhere to home, but O.K. let's do it.)</li>
+</ul>
+<p>Of course I can use a Raspberry PI 2 for this project, but I recommend to use RPI3, because it has built-in WIFI. In my case RPI is connected with ETH cable to my existing network (, or you can use Wi-fi stick)</p>
+<p><strong>Raspbian version:</strong><br />
+<code>Linux raspberrypi 4.4.13-v7+ #894 SMP Mon Jun 13 13:13:27 BST 2016 armv7l GNU/Linux</code></p>
+<p><img alt="Raspbian Download" src="/assets/images/2016/08/2016-08-12_163904.jpg" /></p>
+<p>Download Link: <a href="https://downloads.raspberrypi.org/raspbian_latest">latest</a></p>
+<h2 id="1-samsung-driver">1. Samsung Driver<a class="headerlink" href="#1-samsung-driver" title="Permanent link">&para;</a></h2>
+<p>If it is needed please run update &amp; upgrade before <code>apt-get install</code>:</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+<p>The next step is to find a driver for your printer. I have a Samsung ML_1510 printer, after some googling I found an article which said that â€œsplixâ€ package contains the driver for my printer <code>(printer-driver-splix)</code>.
+Unfortunately the official Samsung linux driver does not support ARM architecture.</p>
+<p>root@raspberrypi:~# <code>apt-cache search samsung</code></p>
+<pre><code>bitpim - utility to communicate with many CDMA phones
+bitpim-lib - architecture-dependent helper files for BitPim
+heimdall-flash - tool for flashing firmware on Samsung Galaxy S devices
+heimdall-flash-frontend - tool for flashing firmware on Samsung Galaxy S devices - Qt GUI
+libimage-exiftool-perl - library and program to read and write meta information in multimedia files
+madwimax - user-space driver for mWiMAX equipment based on Samsung CMC-730
+printer-driver-splix - Driver for Samsung and Xerox SPL2 and SPLc laser printers
+skyeye - Embedded Hardware Simulation
+firmware-samsung - Binary firmware for Samsung MFC video codecs
+</code></pre>
+<p>Command:
+<code>sudo apt-get install printer-driver-splix</code></p>
+<h2 id="2-installing-and-configuring-cups">2. Installing and configuring CUPS<a class="headerlink" href="#2-installing-and-configuring-cups" title="Permanent link">&para;</a></h2>
+<p>Configuring CUPS is very easy. It listens on TCP/631, and you can use your favorite  browser to access the configuration page.
+Because Raspberry has limited resources (mem, cpu), I use ssh tunnel to configure CUPS. (By default cups listen only on the loopback interface for security reason. Of course you can configure cups to listen on its private IP address, but I love tunnelling everything. ™‚ If you prefer this way you should change <code>Listen localhost:631</code> to <code>Port 631</code> in <code>/etc/cups/cupsd.conf</code>.)
+So I created a local tunnel from another linux box in my network:</p>
+<pre><code>ssh 172.16.0.210 -L 1631:localhost:631
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I used port 1631 because non-root user can not bind port under 1025. </p>
+</div>
+<ul>
+<li>Install CUPS:</li>
+</ul>
+<pre><code>apt-get install cups cups-client cups-common cups-pdf
+</code></pre>
+<ul>
+<li>Before you start administrating you should add â€œpiâ€ (or another) user to lpadmin group (or you can use root user):</li>
+</ul>
+<pre><code>usermod -a -G lpadmin pi
+</code></pre>
+<ul>
+<li>OK. Open your browser and head to http://localhost:1631 (or http://localhost:631 without tunneling or http://[IP]:631 if you preconfigured cups to listen on all interface). <img alt="Welcome Screen" src="/assets/images/2016/08/2016-08-11_163051.jpg" /></li>
+<li>Click on â€œAdministrationâ€. You will be prompted for a username and password. If you previously added your user to <code>lpadmin</code> group you can use it, otherwise use â€œrootâ€.
+Click <strong>â€œAdd Printer Buttonâ€</strong>: <img alt="AddPrinterButton" src="/assets/images/2016/08/2016-08-11_163345.jpg" /></li>
+<li>Select your printer from the list. (In my case: Samsung ML-1510_700 (Samsung ML-1510_700)) and <strong>click continue</strong>. <img alt="SelectPrinter" src="/assets/images/2016/08/2016-08-11_163537.jpg" /></li>
+<li>Give a name to your printer, <strong>check â€œShare This Printerâ€</strong> and <strong>click continue</strong>. 
+<img alt="Name" src="/assets/images/2016/08/2016-08-11_163710.jpg" /></li>
+<li><strong>Select your printer</strong> (in my case Samsung ML_1510) and click <strong>â€œAdd Printerâ€</strong>
+If your printer is not listed its driver is not properly installed. You have to do some research for linux driver. <img alt="" src="/assets/images/2016/08/2016-08-11_183827.jpg" /></li>
+<li>Set the default values for this printer. (I did not created a screenshot because this step is different in case of each printer.</li>
+<li>On the main page <strong>click â€œPrintersâ€</strong> and <strong>check</strong> your newly added printer <strong>status</strong>.  <img alt="" src="/assets/images/2016/08/2016-08-11_184026.jpg" /></li>
+<li>(Optional) You can print a test page. <strong>Click</strong> on the <strong>printerâ€™s name</strong>:<img alt="" src="/assets/images/2016/08/2016-08-11_184138.jpg" /><br />
+Now you can see the printer's configuration page. Click on <strong>â€œMaintenanceâ€</strong> drop-down list and choose <strong>â€œPrint Test Pageâ€</strong>: <img alt="PrintTestPage" src="/assets/images/2016/08/2016-08-11_184314.jpg" /><br />
+At the bottom of the page you can see the status of the printing but only for a few seconds. Next we check Jobs:
+Click on â€œJobâ€ on the horizontal main menu, and click â€œShow Competed Jobsâ€: 
+<img alt="" src="/assets/images/2016/08/2016-08-11_184535.jpg" /></li>
+<li>(Optional) On the â€œAdministrationâ€ page check:<br />
+â€“ Share printers connected to this system<br />
+â€“ Allow remote administration<br />
+â€“ Allow printing from the Internet <img alt="" src="/assets/images/2016/08/2016-08-11_184714.jpg" /></li>
+</ul>
+<p>This is a very basic setup of cups, but this is just enough at the beginning. If you want to know more about CUPS visit its <a href="https://www.cups.org/">official website</a> or do some google (re)search. </p>
+<h2 id="2-make-you-printer-available-for-air-print">2. Make you printer available for Air print<a class="headerlink" href="#2-make-you-printer-available-for-air-print" title="Permanent link">&para;</a></h2>
+<p>This step is incredibly easy, just one command:
+<code>sudo apt-get install avahi-discover avahi-daemon</code></p>
+<p>I found some articles about â€œcups airprint setupâ€ which are much complected, but somehow in my case it works with installing only the  avahi damon and discover.
+Links:</p>
+<ul>
+<li>http://iain.polevaultweb.com/2014/03/setting-raspberry-pi-print-server-airprint-support/</li>
+<li>http://www.lynsayshepherd.com/blog/2015/10/18/wireless-printingairprint-server-via-the-raspberry-pi-updated-guide/</li>
+<li>https://wiki.debian.org/AirPrint</li>
+</ul>
+<p><strong>NOTE:</strong>
+Of course you have to connect your RasPI to the same network which used by your Wifi, and connect your phone to it in order to make everything work fine.</p>
+<h2 id="3-add-your-printer-to-windows-10">3. Add your printer to Windows 10<a class="headerlink" href="#3-add-your-printer-to-windows-10" title="Permanent link">&para;</a></h2>
+<p><br>
+So I think if you configured a network printer you would like to use it from another system(s).
+If you donâ€™t share your printer via SAMBA you can use your printers URL to connect to it from Win10. You can check this URL by accessing the admin page of cups.
+Click on â€œprintersâ€ and select the printer you want to connect to: <img alt="" src="/assets/images/2016/08/2016-08-11_190259.jpg" />
+Copy your Printer URL to clipboard from your browser Address Line! For example: <code>https://172.16.0.210:631/printers/rpi_samsung_ml-1510</code></p>
+<h2 id="4-windows-setup">4. Windows Setup:<a class="headerlink" href="#4-windows-setup" title="Permanent link">&para;</a></h2>
+<ul>
+<li>On Windows system click â€œDevice and Printersâ€ in the control panel.<br />
+<img alt="" src="/assets/images/2016/08/2016-08-11_190411.jpg" /></li>
+<li>Click Add printer</li>
+<li>Click The printer that I want isnt listed</li>
+<li>Click Select a shared printer by nameâ€ and paste your printer URL:<br />
+<img alt="" src="/assets/images/2016/08/2016-08-11_190839.jpg" /></li>
+<li>Click Next.
+If Windows can not connect to you printer, try without SSL (http).</li>
+<li>Select your printerâ€™s driver and click finish.</li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2021</span>
+      
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var script,disqus_config=function(){this.page.url="https://readthedocs.vinczejanos.info/Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/",this.page.identifier="Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/"};"undefined"==typeof DISQUS?((script=document.createElement("script")).async=!0,script.src="https://shortname-jvincze-test.disqus.com/embed.js",script.setAttribute("data-timestamp",Date.now()),document.body.appendChild(script)):DISQUS.reset({reload:!0,config:disqus_config})</script>
 
               
             </article>
@@ -928,12 +1200,12 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "search.suggest", "search.highlight", "search.highlight", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.highlight", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
-        <script src="/js/prism.js"></script>
+        <script src="../../../js/prism.js"></script>
       
     
   </body>
